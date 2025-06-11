@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# 🏀 Nike E-Commerce Store Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully functional replica of the Nike online store, built using **React**, **Redux**, and **CSS**, designed to deliver a seamless and dynamic user experience. This project closely mirrors the design and functionality of Nike’s official website, including product listings, cart management, and authentication features.
 
-## Available Scripts
+## 🔥 Features
 
-In the project directory, you can run:
+- **Landing Page**: Custom-designed landing page to boost user engagement.
+- **Authentication**: Firebase Authentication for secure user login using Google Sign-In.
+- **Session Persistence**: Automatically restores user cart and favorites across sessions.
+- **Dynamic Product Filtering**:
+  - Filter by gender, category, and price range.
+  - Responsive and optimized for various devices.
+- **Product Management**:
+  - View detailed product information.
+  - Add/remove items to/from cart and favorites.
+- **Real-time Database**:
+  - Firebase Firestore for storing user data and product details.
+  - Updates reflect instantly in the UI.
 
-### `npm start`
+## 🛠 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React, Redux, React Router
+- **State Management**: Redux Toolkit
+- **Authentication & Database**: Firebase (Auth + Firestore)
+- **Styling**: CSS (modular and responsive)
+- **Hosting (optional)**: Firebase Hosting or Vercel
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js & npm
+- Firebase project (for authentication and Firestore)
+- Git
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/nike-clone.git
+   cd nike-clone
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🏠 Landing Page
+![Landing Page](./ScreenShots/Landingpage.png)
 
-### `npm run eject`
+### 🛍️ Product Listing
+![Product Page](./ScreenShots/HomePage.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🛒 Cart Page
+![Cart](./ScreenShots/CartItem.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

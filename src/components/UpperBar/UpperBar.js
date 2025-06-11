@@ -14,7 +14,7 @@ function UpperBar() {
    </div>
 
    <div className="links">
-    <a href="https://www.nike.com/retail" target="_blank">Find a Store  | </a>
+    <a href="https://www.nike.com/retail" >Find a Store  | </a>
     <a href="#">Help  | </a>
     <a onClick={()=>navigate('auth')}>Join us | </a>
     <a onClick={()=>navigate('auth')} >Sign in </a>

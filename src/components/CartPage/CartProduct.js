@@ -2,12 +2,15 @@ import React from 'react'
 import './CartProduct.css'
 import Dropdown from './Dropdown'
 import { MdDelete } from "react-icons/md";
-import { cartActions } from '../../store/cart-slice';
-import { useDispatch } from 'react-redux';
+import { showSuccessToast } from '../toastutil';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeFromCartWithSync } from '../../store/cart-slice';
 function CartProduct({itemproduct}) {
   const dispatch = useDispatch();
+  const user = useSelector(state => state.auth.user);
   const removeFromCart = () => {
-    dispatch(cartActions.removeFromCart(itemproduct.articleNo));
+    dispatch(removeFromCartWithSync(itemproduct.articleNo, user.uid));
+    showSuccessToast("Removed from cart successfully!");
   };
 
   return (
@@ -23,6 +26,7 @@ function CartProduct({itemproduct}) {
            <p>TotalPrice: {itemproduct.price} $</p>
           
       </div>
+     
       </div>
     </>
   )

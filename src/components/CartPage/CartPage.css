@@ -41,7 +41,15 @@ h2{
     color:black;
     
 }
+.continue-btn{
+    padding: 10px 20px;
+    background-color: black;
+    border-radius: 40px;
+    color: white;
+    border: black 2px solid;
+    font-size: 1rem;
 
+}
 @media (max-width:426px) {
     .cartpagebody .freeshipping{
         width: 300px;

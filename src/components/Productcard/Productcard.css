@@ -23,7 +23,11 @@
   margin-top: 20px;
   margin-left: 20px;
 }
-
+/* Add this to your Productcard.css */
+.Toastify__toast-container {
+  box-shadow: none !important;
+  border: none !important;
+}
 
 /* for large screens  */
 

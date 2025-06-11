@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const authSlice = createSlice({
-    name: 'user',
+    name: 'auth',
     initialState: {
         user: null,
     },
@@ -11,11 +11,21 @@ const authSlice = createSlice({
         },
         logout(state) {
             state.user = null;
+        },
+        updateUserCart(state, action) {
+            if (state.user) {
+                state.user.cart = action.payload;
+            }
+        },
+        updateUserFavorites(state, action) {
+            if (state.user) {
+                state.user.favorites = action.payload;
+            }
         }
     }
 });
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, updateUserCart, updateUserFavorites } = authSlice.actions;
 export const selectUser = (state) => state.auth.user;
 export const selectExtractedUsername = (state) => {
     const user = state.auth.user;

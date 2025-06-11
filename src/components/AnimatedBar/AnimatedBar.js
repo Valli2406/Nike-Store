@@ -10,7 +10,7 @@ function AnimatedBar() {
                     <a href="#"> Look at latest collection right now</a>
                 </div>
                 <div className='margin'>
-                    <a href="#">Look Near By Store for pick Up</a>
+                    <a href="https://www.nike.com/retail">Look Near By Store for pick Up</a>
                 </div>
                 <div className='margin'>
                     <a href="#">Gear Up use Sports25</a>

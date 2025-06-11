@@ -33,7 +33,7 @@
 .box a{
   color: grey;
 }
-.box button{
+.box .btn{
   padding: 10px 20px;
   background-color: black;
   border-radius: 40px;
@@ -46,7 +46,17 @@
 .box .tc{
   width:350px;
 }
-
+.google-btn{
+  padding: 10px 20px;
+  background-color: black;
+  border-radius: 40px;
+  color: white;
+  border: black 2px solid;
+  font-size: 1rem;
+  margin-left: 380px;
+  margin-top: 40px;
+  width: 200px;
+}
 
 
 

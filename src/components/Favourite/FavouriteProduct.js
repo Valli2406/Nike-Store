@@ -1,10 +1,13 @@
 import Dropdown from '../CartPage/Dropdown'
 import React from 'react'
 import { MdDelete } from "react-icons/md";
-import { cartActions } from '../../store/cart-slice';
-import { favouriteActions } from '../../store/Favourite-slice';
 import { IoBagOutline } from "react-icons/io5";
-import { useDispatch } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import { addToCartWithSync } from '../../store/cart-slice';
+import { removeFromFavouritesWithSync } from '../../store/Favourite-slice';
+import { useDispatch, useSelector } from 'react-redux';
+import { showSuccessToast, showInfoToast } from '../toastutil';
 import './FavouriteProduct.css'
 function FavouriteProduct({ favouriteproduct }) {
   const dispatch = useDispatch();
@@ -14,19 +17,32 @@ function FavouriteProduct({ favouriteproduct }) {
   const imageUrl = favouriteproduct.imageUrl;
   const division = favouriteproduct.division;
   const category = favouriteproduct.category;
-  const addToCart = () => {
-    dispatch(cartActions.addToCart({
-      productName,
-      articleNo,
-      price,
-      imageUrl,
-      division,
-      category,
-    })
-    );
-  }
+  const navigate = useNavigate();
+  const user =  useSelector(state => state.auth.user);
+const addToCart = () => {
+        if (!user) {
+          showInfoToast("Please sign in to add items");
+            setTimeout(() => {
+                navigate('/auth');
+            }, 2000);
+            return;
+        }
+        
+        const item = {
+            productName,
+            articleNo,
+            price,
+            imageUrl,
+            division,
+            category,
+        };
+        
+        dispatch(addToCartWithSync(item, user.uid));
+        showSuccessToast("Added to cart successfully!");
+    };
   const removeFromFavourite = () => {
-    dispatch(favouriteActions.removeFromFavourite(favouriteproduct.articleNo));
+    dispatch(removeFromFavouritesWithSync(favouriteproduct.articleNo, user.uid));
+    showSuccessToast("Removed from favorites successfully!");
   };
 
   return (
@@ -44,6 +60,7 @@ function FavouriteProduct({ favouriteproduct }) {
           <p>{favouriteproduct.price}$</p>
           <Dropdown storageKey="dropdown1" />
         </div>
+       
       </div>
 
       {/* // const articleNo = action.payload;

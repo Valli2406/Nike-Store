@@ -42,10 +42,10 @@ A fully functional replica of the Nike online store, built using **React**, **Re
 
 
 ### 🏠 Landing Page
-![Landing Page](./ScreenShots/Landingpage.png)
+![Landing Page](./ScreenShots/LandingPage.png)
 
 ### 🛍️ Product Listing
-![Product Page](./ScreenShots/HomePage.png)
+![Product Page](./ScreenShots/Homepage.png)
 
 ### 🛒 Cart Page
 ![Cart](./ScreenShots/CartItem.png)

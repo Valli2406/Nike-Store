@@ -23,7 +23,7 @@ A fully functional replica of the Nike online store, built using **React**, **Re
 - **State Management**: Redux Toolkit
 - **Authentication & Database**: Firebase (Auth + Firestore)
 - **Styling**: CSS (modular and responsive)
-- **Hosting (optional)**: Firebase Hosting or Vercel
+- **Hosting **: Netlify
 
 ## 🚀 Getting Started
 
